@@ -232,5 +232,14 @@ public class ArticleController {
 		return result>0;
 		
 	}
+	
+	@RequestMapping("toUpdate")
+	public String toUpdate(HttpServletRequest request,Integer aId) {
+		Article article = articleService.findById(aId);
+		System.err.println(article);
+		request.setAttribute("article", article);
+		request.setAttribute("content1", article.getContent());
+		return "my/article/update";
+	}
 
 }

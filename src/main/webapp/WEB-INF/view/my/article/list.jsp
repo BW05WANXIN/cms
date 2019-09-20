@@ -15,6 +15,10 @@ function myopen(id){
 	
 }
 
+function toUpdate(id) {
+	  $('#center').load("/article/toUpdate?aId="+id,"_blank");
+}
+
 </script>
 </head>
 <body>
@@ -24,6 +28,7 @@ function myopen(id){
 			<dt><a href="javascript:myopen(${article.id })">${article.title }</a></dt>
 			<dd>作者:${sessionScope.USER_SESSION_KEY.username} 发布时间:${article.created}
 				频道:${article.chnName}  分类:${article.catName}
+				<a href="javascript:toUpdate(${article.id })">修改</a>
 			</dd>
 		</dl>
 		<hr>
