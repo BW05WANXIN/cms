@@ -18,7 +18,8 @@ import com.wanxin.entity.Article;
 @Mapper
 public interface ArticleMapper {
 
-/*	@Select("select id,title,picture,channel_id AS channelId,category_id categoryId,user_id AS userId,hits,hot,status,deleted,created,updated "
+/*	@Select("select id,title,picture,channel_id AS channelId,category_id categoryId,"
+			+ " user_id AS userId,hits,hot,status,deleted,created,updated "
 			+ " from cms_article "
 			+ " where catygory_id = ${value}")
 	@ResultType(Article.class)*/
